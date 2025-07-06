@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 export const navLinks = [
   {
     id: 1,
@@ -28,24 +30,24 @@ export const myProjects = [
     subdesc:
       '✅ Select from Soft Boiled, Medium Boiled, or Hard Boiled eggs \n✅ Animated egg GIFs for a visually engaging experience \n✅ Countdown timer with progress indicator \n✅ Responsive UI for mobile and desktop\n✅ PWA support for offline usage \n✅ Modal notification when the egg is ready',
     href: 'https://ruksinadev.github.io/egg-boiler/',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo2.png',
+    texture: `${base}textures/project/project1.mp4`,
+    logo: `${base}assets/project-logo2.png`,
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: `${base}assets/spotlight1.png`,
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: `${base}assets/react.svg`,
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: `${base}assets/tailwindcss.png`,
       }
     ],
   },
@@ -55,34 +57,34 @@ export const myProjects = [
     subdesc:
       '✅ Register with username, email, password, role, and mobile number\n✅ Login with JWT token generation\n✅ Password hashing using BCrypt.Net\n✅ Store token in localStorage (configurable)\n✅ AuthGuard to protect routes and check token expiration\n✅ Role-based access (e.g., admin can access /user-list)\n✅ Switch between real API and mock JSON mode for testing\n✅ Auto logout on token expiry\n✅ Angular routing with access control',
     href: 'https://ruksinadev.github.io/auth-fullstack-demo/login',
-    texture: '/textures/project/project2.mp4',
-    logo: '/assets/project-logo2.png',
+    texture: `${base}textures/project/project2.mp4`,
+    logo: `${base}assets/project-logo2.png`,
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
-    spotlight: '/assets/spotlight2.png',
+    spotlight: `${base}assets/spotlight2.png`,
     tags: [
       {
         id: 1,
         name: 'Angular',
-        path: '/assets/angular.png',
+        path: `${base}assets/angular.png`,
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: `${base}assets/tailwindcss.png`,
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/assets/typescript.png',
+        path: `${base}assets/typescript.png`,
       },
       {
         id: 4,
         name: 'CShrap',
-        path: '/assets/cshrap.png',
+        path: `${base}assets/cshrap.png`,
       }
     ],
   }
@@ -106,7 +108,7 @@ export const workExperiences = [
     pos: 'Frontend Developer',
     duration: '2022 - 2024',
     title: "Developed and maintained front-end interfaces for 3 enterprise systems using HTML5, CSS3, JavaScript, and Ionic 4. Collaborated with cross-functional teams to ensure responsive UI and smooth user experience. Handled debugging, technical issue resolution, and implemented designs based on business requirements.",
-    icon: '/assets/company1.png',
+    icon: './assets/company1.png',
     animation: 'victory',
   },
   {
@@ -115,7 +117,7 @@ export const workExperiences = [
     pos: 'Frontend Developer',
     duration: '2020 - 2022',
     title: "Developed and maintained web interfaces for internal systems and Aurora application using HTML5, CSS3, Sass, and React with Material UI. Created interactive maps with Leaflet.js and supported mobile-responsive design. Collaborated with international teams and contributed to C# features under senior guidance.",
-    icon: '/assets/company2.jpg',
+    icon: './assets/company2.jpg',
     animation: 'clapping',
   }
 ];

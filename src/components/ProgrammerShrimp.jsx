@@ -10,7 +10,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const ProgrammerShrimp = (props) => {
-  const { nodes, materials } = useGLTF('/models/programmer_shrimp.glb')
+  const { nodes, materials } = useGLTF('./models/programmer_shrimp.glb')
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, Math.PI]}>
@@ -99,6 +99,6 @@ const ProgrammerShrimp = (props) => {
   )
 }
 
-useGLTF.preload('/models/programmer_shrimp.glb')
+useGLTF.preload('./models/programmer_shrimp.glb')
 
 export default ProgrammerShrimp;

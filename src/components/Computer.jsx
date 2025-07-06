@@ -11,7 +11,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Computer(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/computer.glb')
+  const { nodes, materials, animations } = useGLTF('./models/computer.glb')
   const { actions, names } = useAnimations(animations, group)
 
   // 👇 เพิ่ม useEffect เพื่อสั่งให้ action เล่น
@@ -195,4 +195,4 @@ export function Computer(props) {
   )
 }
 
-// useGLTF.preload('/models/computer.glb')
+// useGLTF.preload('./models/computer.glb')

@@ -19,7 +19,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <div className='pl-5 pr-5 sm:pl-6 sm:pr-6'>
-               <img src="assets/grid1.png" alt="grid-1" className="rounded-md w-full sm:h-[276px] h-fit" />
+               <img src="./assets/grid1.png" alt="grid-1" className="rounded-md w-full sm:h-[276px] h-fit" />
             </div>
             <div>
               <p className="grid-headtext">Hi, I’m Ruksina Prommee</p>
@@ -32,7 +32,7 @@ const About = () => {
 
          <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src="./assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Tech Stack</p>
@@ -68,7 +68,7 @@ const About = () => {
 
        <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid3.png" alt="grid-3" className="rounded-md w-full sm:h-[266px] h-fit object-contain bg-black" />
+            <img src="./assets/grid3.png" alt="grid-3" className="rounded-md w-full sm:h-[266px] h-fit object-contain bg-black" />
 
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
@@ -83,7 +83,7 @@ const About = () => {
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img
-              src="assets/grid4.png"
+              src="./assets/grid4.png"
               alt="grid-4"
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
@@ -91,7 +91,7 @@ const About = () => {
             <div className="space-y-2">
               <p className="grid-headtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
-                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
+                <img src={hasCopied ? './assets/tick.svg' : './assets/copy.svg'} alt="copy" />
                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-black">ruksia.prom97@gmail.com</p>
               </div>
             </div>

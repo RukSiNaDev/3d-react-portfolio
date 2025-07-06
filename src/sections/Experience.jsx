@@ -80,7 +80,7 @@ const Experience = () => {
             </div>
             <button className="flex m-5 items-center gap-2 cursor-pointer text-white-600 float-right"
               onClick={saveFile}>
-               <img src="/assets/download.png" alt="arrow" className="w-5 h-5" />
+               <img src="./assets/download.png" alt="arrow" className="w-5 h-5" />
               <p>Download My Resume</p>
           
             </button>

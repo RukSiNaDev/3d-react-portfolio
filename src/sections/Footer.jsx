@@ -10,12 +10,12 @@ const Footer = () => {
       <div className="flex gap-3">
         <a href="https://github.com/RukSiNaDev">
           <div className="social-icon">
-            <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
+            <img src="./assets/github.svg" alt="github" className="w-1/2 h-1/2" />
           </div>
         </a>
         <a href="https://gitlab.com/ruksina.prom97">
           <div className="social-icon">
-            <img src="/assets/gitlab.png" alt="twitter" className="w-1/2 h-1/2" />
+            <img src="./assets/gitlab.png" alt="twitter" className="w-1/2 h-1/2" />
           </div>
         </a>
     

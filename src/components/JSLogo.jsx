@@ -9,7 +9,7 @@ Title: Javascript (1)
 import { Float, useGLTF } from '@react-three/drei';
 
 export const JSLogo = (props) => {
-  const { nodes, materials } = useGLTF('/models/javascript_1.glb')
+  const { nodes, materials } = useGLTF('./models/javascript_1.glb')
   return (
     <Float dispose={null}>
       <group {...props} scale={0.05} rotation={[0, Math.PI / 4, 0]}>
@@ -23,7 +23,7 @@ export const JSLogo = (props) => {
   )
 }
 
-useGLTF.preload('/models/javascript_1.glb')
+useGLTF.preload('./models/javascript_1.glb')
 
 
 export default JSLogo;
