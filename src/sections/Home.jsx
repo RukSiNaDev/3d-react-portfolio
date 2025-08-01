@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import { Leva } from "leva";
 import { useMediaQuery } from 'react-responsive';
 import { calculateSizes } from '../constants/index.js';
-import { Target } from "../components/Target.jsx";
+// import { Target } from "../components/Target.jsx";
 import { ReactLogo } from "../components/ReactLogo.jsx";
 import { JSLogo } from "../components/JSLogo.jsx";
 import HomeCamera from "../components/HomeCamera.jsx";
@@ -36,7 +36,7 @@ const Home = () => {
               <Computer scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0, -0.3, 0]} />
             </HomeCamera>
             <group>
-              <Target position={sizes.targetPosition} />
+              {/* <Target position={sizes.targetPosition} /> */}
               <ReactLogo position={sizes.reactLogoPosition} />
               <JSLogo position={sizes.jsPosition} />
             </group>
