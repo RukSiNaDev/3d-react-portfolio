@@ -6,9 +6,10 @@ import { workExperiences } from '../constants/index.js';
 import ProgrammerShrimp from '../components/ProgrammerShrimp.jsx';
 import { useMediaQuery } from 'react-responsive';
 import { calculateSizes } from '../constants/index.js';
+import { useLanguage } from "../context/LanguageContext";
 
 const Experience = () => {
-
+  const { lang, toggleLang } = useLanguage();
   const [animationName, setAnimationName] = useState('idle');
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -17,7 +18,7 @@ const Experience = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   const saveFile = () => {
-    fetch("/pdf/ruksina_resume.pdf").then((response) => {
+    fetch("./pdf/ruksina_resume.pdf").then((response) => {
       response.blob().then((blob) => {
         const fileURL =
           window.URL.createObjectURL(blob);
@@ -33,7 +34,7 @@ const Experience = () => {
   return (
     <section className="c-space my-20" id="work">
       <div className="w-full text-white-600">
-        <p className="head-text">My Work Experience</p>
+        <p className="head-text">Work Experience</p>
 
         <div className="work-container">
           <div className="work-canvas">
@@ -69,21 +70,20 @@ const Experience = () => {
                   </div>
 
                   <div className="sm:p-5 px-2.5 py-5">
-                    <p className="font-bold text-white-800">{item.name}</p>
+                    <p className="font-bold text-white-800">{lang === 'th' ? item.nameTh : item.nameEn}</p>
                     <p className="text-sm mb-5">
                       {item.pos} -- <span>{item.duration}</span>
                     </p>
-                    <p className="transition-all ease-in-out duration-500">{item.title}</p>
+                    <p className="transition-all ease-in-out duration-500  whitespace-pre-line">{lang === 'th' ? item.titleTh : item.titleEn}</p>
                   </div>
                 </div>
               ))}
             </div>
-            {/* <button className="flex m-5 items-center gap-2 cursor-pointer text-white-600 float-right"
+            <button className="flex m-5 items-center gap-2 cursor-pointer text-white-600 float-right"
               onClick={saveFile}>
                <img src="./assets/download.png" alt="arrow" className="w-5 h-5" />
-              <p>Download My Resume</p>
-          
-            </button> */}
+              <p>{lang === 'th' ? 'ดาวน์โหลดเรซูเม่' : 'Download My Resume'}</p>
+            </button>
           </div>
         </div>
       </div>

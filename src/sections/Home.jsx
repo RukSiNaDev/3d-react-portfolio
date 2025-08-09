@@ -10,9 +10,11 @@ import { calculateSizes } from '../constants/index.js';
 import { ReactLogo } from "../components/ReactLogo.jsx";
 import { JSLogo } from "../components/JSLogo.jsx";
 import HomeCamera from "../components/HomeCamera.jsx";
+import { useLanguage } from "../context/LanguageContext";
 
 
 const Home = () => {
+  const { lang, toggleLang } = useLanguage();
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
@@ -23,9 +25,14 @@ const Home = () => {
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-black text-center font-generalsans">
-          Hi, I am Ruksina <span className="waving-hand">🍅</span><span className="waving-hand">🥑</span><span className="waving-hand">🍆</span>
+          <span className="waving-hand">🍅</span><span className="waving-hand">🥑</span><span className="waving-hand">🍆</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
+        <p className="hero_tag text-gray_gradient">
+          {lang === 'th' ?
+            'การสร้างผลิตภัณฑ์และสร้างแบรนด์'
+            :
+            'Building Products & Brands'}
+        </p>
       </div>
 
       <div className="w-full h-full absolute inset-0 pt-40 sm:pt-30">

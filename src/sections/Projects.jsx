@@ -7,10 +7,12 @@ import { Center, OrbitControls } from '@react-three/drei';
 import { myProjects } from '../constants/index.js';
 import CanvasLoader from '../components/Loading.jsx';
 import DemoComputer from '../components/DemoComputer.jsx';
+import { useLanguage } from "../context/LanguageContext";
 
 const projectCount = myProjects.length;
 
 const Projects = () => {
+  const { lang, toggleLang } = useLanguage();
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   const handleNavigation = (direction) => {
@@ -31,7 +33,7 @@ const Projects = () => {
 
   return (
     <section className="c-space my-20">
-      <p className="head-text" id="project">My Project</p>
+      <p className="head-text" id="project">Project</p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full" >
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
@@ -46,8 +48,8 @@ const Projects = () => {
           <div className="flex flex-col gap-5 text-white-600 my-5">
             <p className="text-black text-2xl font-semibold animatedText">{currentProject.title}</p>
 
-            <p className="animatedText whitespace-pre-line">{currentProject.desc}</p>
-            <p className="animatedText whitespace-pre-line">{currentProject.subdesc}</p>
+            <p className="animatedText whitespace-pre-line">{lang === 'th' ? currentProject.descTh : currentProject.descEn}</p>
+            <p className="animatedText whitespace-pre-line">{lang === 'th' ? currentProject.subdescTh : currentProject.subdescEn}</p>
           </div>
 
           <div className="flex items-center justify-between flex-wrap gap-5">
@@ -64,7 +66,7 @@ const Projects = () => {
               href={currentProject.href}
               target="_blank"
               rel="noreferrer">
-              <p>View Demo</p>
+              <p>{lang === 'th' ? 'เข้าชม Demo' : 'View Demo'}</p>
               <img src="./assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
             </a>
           </div>
